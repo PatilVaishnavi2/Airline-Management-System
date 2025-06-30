@@ -1,0 +1,26 @@
+DROP TABLE IF EXISTS airline_db.flights;
+CREATE TABLE  airline_db.flights (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  fl_code varchar(10) DEFAULT NULL,
+  source varchar(50) DEFAULT NULL,
+  destination varchar(50) DEFAULT NULL,
+  departure_time time DEFAULT NULL,
+  arrival_time time DEFAULT NULL,
+  seats int(11) DEFAULT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+
+
+DROP TABLE IF EXISTS airline_db.passengers;
+CREATE TABLE  airline_db.passengers (
+  pnr_no varchar(10) NOT NULL,
+  name varchar(100) DEFAULT NULL,
+  gender varchar(10) DEFAULT NULL,
+  address varchar(255) DEFAULT NULL,
+  nationality varchar(50) DEFAULT NULL,
+  ph_no varchar(15) DEFAULT NULL,
+  passport_no varchar(20) DEFAULT NULL,
+  fl_code varchar(10) DEFAULT NULL,
+  PRIMARY KEY (pnr_no)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
